@@ -4,7 +4,7 @@ const Resetpassword = () => {
     return (
         <>
             <div className='bg-black w-screen '>
-                <h1>ieri fgdf df
+                <h1>Its Reset pass word section edited from the remote machine
                 </h1>
             </div>
         </>

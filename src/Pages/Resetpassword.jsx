@@ -4,10 +4,8 @@ const Resetpassword = () => {
     return (
         <>
             <div className='bg-black w-screen '>
-
-                
-
-                Hello world
+                <h1>ieri fgdf df
+                </h1>
             </div>
         </>
     )

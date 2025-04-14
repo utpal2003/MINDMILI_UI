@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import vectorimage1 from "../assets/images/Vector 2.png";
-import vectorimage2 from "../assets/images/Rectangle 7.png";
-import roundvectorimage from "../assets/images/Ellipse 3.png";
-import vectorimage3 from "../assets/images/Vector 1.png";
-import ellaspsesymbol from "../assets/images/Ellipse 2.png"
 
-// import vectorsymbol from "../assets/images/Vector 3.png"
+import vectorimage1 from '../../assets/images/vector1.png';
+import vectorimage2 from '../../assets/images/vector2.png';
+import vectorimage3 from '../../assets/images/vector3.png';
+import roundvectorimage from "../../assets/images/Ellipse3.png";
+import ellaspsesymbol from "../../assets/images/Ellipse2.png";
+
 
 const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);

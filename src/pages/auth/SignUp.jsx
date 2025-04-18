@@ -26,13 +26,13 @@ const SignUp = () => {
     const username = usernameRef.current.value.trim();
     const email = emailRef.current.value.trim();
 
-
     if (!firstname || !lastname || !username || !email) {
       toast.error("Please fill in all fields");
       return;
     }
 
     setIsButtonDisabled(true);
+
     setTimeout(() => {
       console.log(firstname,lastname,username,email)
       toast.success("Registered successfull check your email to generate password", { duration: 1000 });
@@ -72,8 +72,6 @@ const SignUp = () => {
         </div>
 
         {/* for phone only */}
-
-
       </div>
 
 

@@ -5,6 +5,7 @@ import "./App.css";
 import SignUp from './pages/auth/SignUp'
 import Signin from './pages/auth/Signin'
 import Home from './pages/home/Home';
+import EmailNotice from "./pages/auth/EmailNotice";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/resetpassword" element = {<Resetpassword/>}/>
+        <Route path="/emailnotice" element = {<EmailNotice/>}/>
       </Routes>
     </BrowserRouter>
   );

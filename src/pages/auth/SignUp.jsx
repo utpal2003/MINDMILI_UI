@@ -1,15 +1,19 @@
  import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useMutation } from "@apollo/client";
+import { SIGNUP_USER } from "../../graphqlapi/signupMutation";
 
 import vectorimage1 from '../../assets/images/vector1.png';
 import vectorimage2 from '../../assets/images/vector2.png';
 import vectorimage3 from '../../assets/images/vector3.png';
 import roundvectorimage from "../../assets/images/Ellipse3.png";
 import ellaspsesymbol from "../../assets/images/Ellipse2.png";
+import EmailNotice from './EmailNotice';
 
 const SignUp = () => {
+  const [signUp] = useMutation(SIGNUP_USER);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const navigate = useNavigate();
@@ -27,16 +31,28 @@ const SignUp = () => {
     const email = emailRef.current.value.trim();
 
     if (!firstname || !lastname || !username || !email) {
-      toast.error("Please fill in all fields");
+      toast.error("All fields are required");
       return;
     }
-
     setIsButtonDisabled(true);
 
-    setTimeout(() => {
-      console.log(firstname,lastname,username,email)
-      toast.success("Registered successfull check your email to generate password", { duration: 1000 });
+    setTimeout(async () => {
+      toast.success("Mail sends Successfully", { duration: 1000 });
       setIsButtonDisabled(false);
+      navigate("/emailnotice", { state: { email } });
+
+      try{
+        const {data} = await signUp({
+           variables:{
+            firstName : firstname,
+            lastName: lastname,
+            username: username,
+            email: email
+           },
+        });
+      }catch(error){
+        toast.error(err.response.data.errors || "User registration failed!!");
+      }
 
       firstnameRef.current.value = "";
       lastnameRef.current.value = "";
@@ -44,6 +60,7 @@ const SignUp = () => {
       emailRef.current.value = "";
 
     }, 3000);
+
   };
 
   return (

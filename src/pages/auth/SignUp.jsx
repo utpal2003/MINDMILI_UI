@@ -71,9 +71,9 @@ const SignUp = () => {
           <img src={vectorimage2} alt="Vector Icon" className="w-full h-full sm:object-cover object-cover" />
         </div>
 
-        <div className="absolute left-0 sm:left-10  lg:left-20 bottom-[2rem] lg:bottom-[3rem] sm:bottom-[0.5rem] md:bottom-[1rem] h-[15rem] sm:h-[25rem] lg:h-[30rem] sm:w-[18rem] lg:w-[24rem] z-30" >
+        {/* <div className=" absolute left-0 sm:left-0  lg:left-20 bottom-[2rem] lg:bottom-[3rem] sm:bottom-[0.5rem] md:bottom-[1rem] h-[15rem] sm:h-[25rem] lg:h-[30rem] sm:w-[18rem] lg:w-[24rem] z-30" >
           <img src={vectorimage1} alt="Vector Icon" className="w-full h-full object-scale-down" />
-        </div>
+        </div> */}
 
         {/* Right Side Images */}
         <div className="absolute right-10 sm:right-[10rem] lg:right-[18rem] top-10 md:top-[6rem] lg:top-[6rem] h-[3rem] w-[3rem] z-30">

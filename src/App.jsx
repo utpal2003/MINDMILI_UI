@@ -6,6 +6,7 @@ import SignUp from './pages/auth/SignUp'
 import Signin from './pages/auth/Signin'
 import Home from './pages/home/Home';
 import EmailNotice from "./pages/auth/EmailNotice";
+import CreatePassword from './pages/auth/CreatePassword'
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/resetpassword" element = {<Resetpassword/>}/>
         <Route path="/emailnotice" element = {<EmailNotice/>}/>
+        <Route path="/createpassword" element = {<CreatePassword/>}/>
         <Route path="/leaderboard" element = {<Leaderboard/>}/>
       </Routes>
     </BrowserRouter>

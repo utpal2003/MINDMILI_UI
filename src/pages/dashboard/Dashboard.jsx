@@ -6,6 +6,8 @@ import { CgProfile } from 'react-icons/cg';
 import Createquiz from '../../Layout/Createquiz';
 import { Link } from 'react-router-dom';
 
+import PerformenceGraph from './PerformenceGraph';
+
 const dashboardStats = [
   { label: 'Total Attempted Tests', value: 20, color: 'bg-blue-100', icon: '📅' },
   { label: 'Total Questions Attempted', value: 122, color: 'bg-cyan-100', icon: '✏️' },
@@ -52,7 +54,7 @@ const Dashboard = () => {
               >
                 <FaPlus /> <span className="text-sm">Create Test</span>
               </button>
-              <Link><CgProfile className="w-8 h-8" /></Link>
+              <Link><CgProfile className="w-8 h-8"/></Link>
             </div>
           </div>
 
@@ -88,9 +90,7 @@ const Dashboard = () => {
           {/* Chart Section */}
           <div className="bg-white rounded-md p-4 shadow">
             <h2 className="font-semibold mb-2">Accuracy Growth (%)</h2>
-            <div className="w-full h-60 bg-blue-100 flex items-center justify-center">
-              <span className="text-gray-500">Graph contain</span>
-            </div>
+            <PerformenceGraph/>
           </div>
 
         </div>

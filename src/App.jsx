@@ -14,7 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Resetpassword from './pages/auth/Resetpassword'
 import Leaderboard from "./pages/dashboard/Leaderboard";
-
+import Test from "./pages/dashboard/Test";
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
         <Route path="/emailnotice" element = {<EmailNotice/>}/>
         <Route path="/createpassword" element = {<CreatePassword/>}/>
         <Route path="/leaderboard" element = {<Leaderboard/>}/>
+        <Route path="/test" element = {<Test/>}/>
       </Routes>
     </BrowserRouter>
   );

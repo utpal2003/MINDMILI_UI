@@ -75,10 +75,10 @@ const Dashboard = () => {
           <h1 className="text-2xl font-semibold mb-4 text-gray-600">Hi, User</h1>
 
           {/* User Status*/}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 bg-white p-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 bg-white p-5 rounded-lg">
             {dashboardStats.map((stat, idx) => (
               <div key={idx} className={`rounded-md ${stat.color} p-4 flex items-center gap-4`}>
-                <div className="text-3xl">{stat.icon}</div>
+                <div className="text-3xl ">{stat.icon}</div>
                 <div>
                   <p className="text-sm text-gray-700 font-medium">{stat.label}</p>
                   <p className="text-xl font-semibold">{stat.value}</p>

@@ -14,7 +14,7 @@ const Dashboardsidebar = ({ SidebarOpen, togglesidehamburger }) => {
       {/* Close button - only for mobile */}
       <div className="absolute right-0 top-2 md:hidden flex justify-end p-4">
         <button onClick={togglesidehamburger}>
-          <IoMdClose className="text-2xl text-gray-600 hover:text-red-500" />
+          <IoMdClose className="text-2xl text-gray-500 hover:text-red-500" />
         </button>
       </div>
 
@@ -29,16 +29,17 @@ const Dashboardsidebar = ({ SidebarOpen, togglesidehamburger }) => {
         {/* Account Links */}
         <div>
           <h3 className="text-sm font-semibold text-gray-500 mb-3">ACCOUNT</h3>
-          <div className="flex flex-col space-y-4 pl-4 font-bold text-md">
-            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+
+          <div className="flex flex-col space-y-6 pl-4 font-bold text-md  md:text-xl mt-4  ">
+            <Link to="/" className="flex items-center space-x-2 text-gray-500 hover:text-blue-600">
               <FaHome />
               <span>Home</span>
             </Link>
-            <Link to="/test" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+            <Link to="/test" className="flex items-center space-x-2 text-gray-500 hover:text-blue-600">
               <FaBookOpen />
               <span>Test</span>
             </Link>
-            <Link to="/leaderboard" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+            <Link to="/leaderboard" className="flex items-center space-x-2 text-gray-500 hover:text-blue-600">
               <FaTrophy />
               <span>Leaderboard</span>
             </Link>
@@ -48,12 +49,13 @@ const Dashboardsidebar = ({ SidebarOpen, togglesidehamburger }) => {
         {/* Support Links */}
         <div>
           <h3 className="text-sm font-semibold text-gray-500 mb-3 pt-6">SUPPORT</h3>
-          <div className="flex flex-col space-y-4 pl-4 font-bold text-md">
-            <Link to="/settings" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+
+          <div className="flex flex-col space-y-6 pl-4 font-bold text-md  md:text-xl mt-4">
+            <Link to="/settings" className="flex items-center space-x-2 text-gray-500 hover:text-blue-600">
               <FaCog />
               <span>Settings</span>
             </Link>
-            <Link to="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+            <Link to="/contact" className="flex items-center space-x-2 text-gray-500 hover:text-blue-600">
               <FaEnvelope />
               <span>Contact Us</span>
             </Link>
